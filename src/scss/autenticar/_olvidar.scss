@@ -1,0 +1,24 @@
+@use 'base/variables' as V;
+@use 'base/mixins' as M;
+
+.olvidar{
+
+    margin-top: 2rem;
+    .uptask{
+        @include M.textoDegradado(V.$rosa, 7rem, center);
+    }
+
+    .acciones a{
+        color: V.$rosa;
+    }
+    .contenedor-boton-login{
+        display: flex;
+        justify-content: center;
+    
+        input[type='submit']{
+            @include M.boton(V.$rosa, V.$blanco);
+            border-radius: 1rem;
+        }
+    } 
+
+}

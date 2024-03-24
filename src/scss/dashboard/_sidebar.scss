@@ -1,0 +1,68 @@
+@use 'base/variables' as V;
+@use 'base/mixins' as M;
+
+.sidebar{
+    background-color: V.$oliver;
+    padding: 1rem;
+    
+    h2{
+        color: V.$blanco;
+        margin: 0;
+        text-align: center;
+    }
+
+    /*&.mostrar{
+        display: block;
+    }*/
+
+    .sidebar_nav{
+        margin: 4rem;
+        display: none;
+
+        &.mostrar{
+            display: block;
+        }
+
+        @include M.tablet{
+            display: block;
+        }
+
+        @media 
+            (width >= 375px) and
+            (width <= 767px){
+                text-align: center;
+            }
+            
+        a{
+            color: V.$blanco;
+            display: block;
+            margin-bottom: 2rem;
+            padding: .8rem;
+            transition-property: background-color;
+            transition-duration: 300ms;
+
+            &:hover,
+            &.activo{
+                background-color: darken(V.$oliver, 20%);
+                border-radius: .5rem;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .menu{
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+        img{
+            @include M.tablet{
+                display: none;
+            }
+            width: 1.3rem;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}

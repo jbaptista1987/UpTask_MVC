@@ -1,0 +1,40 @@
+@use 'base/variables' as V;
+@use 'base/mixins' as M;
+
+@media (prefers-color-scheme: dark) {
+    
+    body{
+        background-image: none;
+        background-color: V.$grisDark;
+        color: V.$blanco;
+    }
+    .contenedor{
+        background-color: V.$grisDark;
+        color: V.$blanco;
+    }
+    .formulario{
+        border: 2px solid V.$blanco;
+        border-radius: .5rem;
+        padding: 1rem;
+        box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.8)
+    }
+    .formulario .campo input{
+        background-color: lighten(V.$grisDark, 15%);
+    }
+    .tagline{
+        color: V.$blanco;
+    }
+    .dashboard .principal{
+        background-color: V.$grisDark;
+    }
+    .barra{
+        background-color: V.$grisDark;
+        box-shadow: 1px 3px 10px 2px rgba(255, 255, 255, 0.8);
+    }
+    .tarea p{
+        color: V.$blanco;
+    }
+    .primera{
+        color: V.$blanco;
+    }
+}

@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",(function(){if(document.querySelector("#menu_mobile")){const e=document.querySelector(".sidebar_nav");document.querySelector("#menu_mobile").addEventListener("click",(function(){e.classList.toggle("mostrar")}))}}));

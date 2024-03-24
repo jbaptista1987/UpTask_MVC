@@ -1,0 +1,21 @@
+@use 'base/variables' as V;
+@use 'base/mixins' as M;
+
+.errorLlenado{
+    color: V.$blanco;
+    width: auto;
+    text-align: center;
+    margin: 1rem 0;
+    font-weight: 500;
+
+    &.error{
+        background-color: lighten($color: V.$rojo, $amount: 60%);
+        border-left: .5rem solid V.$rojo;
+        color: V.$rojo;
+    }
+    &.msjExito{
+        background-color: lighten($color: V.$verde, $amount: 60%);
+        border-left: .5rem solid V.$verde;
+        color: V.$verde;
+    }
+}

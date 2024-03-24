@@ -1,0 +1,62 @@
+@use 'base/variables' as V;
+@use 'base/mixins' as M;
+
+
+.barra{
+    display: grid;
+    grid-template-columns: 47% 13% 40%;
+    gap: 1rem;
+    align-items: center;
+    background-color: V.$blanco;
+    padding: 1rem 2rem;
+    box-shadow: 1px 12px 9px -13px rgba(0,0,0,.4);
+    //text-align: center;
+    .elemento-tercera-columna{
+        justify-self: end;
+    }
+
+    @media (width >= 375px) and (width <= 767px){
+        display: grid;
+        grid-template-rows: auto auto; // Define dos filas
+        grid-template-columns: 70% 30%; // Define las columnas
+        grid-template-areas: 
+            "primera segunda"
+            "combinada combinada"; // La segunda fila actúa como una celda combinada
+    
+
+        .primera {
+            grid-area: primera; // Asigna el área 'primera'
+        }
+
+        .segunda {
+            grid-area: segunda; // Asigna el área 'segunda'
+        }
+
+        .combinada {
+            grid-area: combinada; // Asigna el área 'combinada' que toma ambas columnas en la segunda fila
+        }
+    }
+    
+
+    p{
+        margin: 1rem 0;
+
+        span{
+            font-weight: 700;
+            color: V.$oliver;
+        }
+    }
+
+    .ImagenPerfil{
+        width: 7.7rem;
+        height: 7.7rem;
+        border-radius: 5rem;
+    }
+
+    .cerrarSesion{
+        @include M.boton( darken(V.$oliver, 20%), V.$blanco );
+        font-size: 1.4rem;
+        padding: 1.2rem;
+        border-radius: .5rem;
+    }
+}
